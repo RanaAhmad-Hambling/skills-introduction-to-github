@@ -1,0 +1,11 @@
+Public Function coalesce(ParamArray items() As Variant) As Variant
+Dim n As Byte
+
+For n = 0 To UBound(items)
+    If Not IsNull(items(n)) Then
+        coalesce = items(n)
+        Exit For
+    End If
+Next n
+
+End Function
